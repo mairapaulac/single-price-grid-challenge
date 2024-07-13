@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    height: auto;
+}
+
+#container {
+    width: 580px;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 5px;
+}
+
+.header {
+    display: grid;
+    grid-column: 1/-1;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 190px;
+    width: auto;
+    justify-items: start;
+}
+
+.a {
+    grid-row: 2/3;
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 5px;
+    text-align: left;
+    padding: 20px;
+}
+
+.b {
+    grid-column: 3/4;
+    grid-row: 2;
+    background-color: #4ABEBD;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    padding: 20px;
+}
+
+.section {
+    width: 290px;
+    height: 230px;
+}
+
+.header h1 {
+    margin: 40px 30px 20px 40px;
+    font-family: "Karla", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #4ABEBD;
+}
+
+.header :nth-child(2) {
+    margin: 5px 0px 14px 40px;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: hsl(71, 73%, 54%);
+}
+
+.header :nth-child(3),
+.header :nth-child(4) {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(218, 22%, 67%);
+    margin: 0px 0px 0px 40px;
+}
+
+.header :nth-child(4) {
+    margin: 0px 0px 30px 40px;
+}
+
+.header :nth-child(3) {
+    margin: 0px 0px 8px 40px;
+}
+
+.a p {
+    font-family: "Karla", sans-serif;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.a :nth-child(1) {
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px 5px 20px;
+    font-size: 22px;
+}
+
+.a :nth-child(3) {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.b p {
+    font-family: "Karla", sans-serif;
+    margin-left: 20px;
+}
+
+.b :nth-child(1) {
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px 20px 20px;
+    font-size: 20px;
+}
+
+.b :nth-child(2),
+.b :nth-child(3),
+.b :nth-child(4),
+.b :nth-child(5),
+.b :nth-child(6),
+.b :nth-child(7),
+.b :nth-child(8) {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.botao {
+    font-family: "Karla", sans-serif;
+    width: 210px;
+    height: 35px;
+    background-color: hsl(71, 73%, 54%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0px 30px 0px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.flex-container p {
+    margin: 0;
+}
+
+.flex-container :nth-child(1) {
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.flex-container :nth-child(2) {
+    font-size: 15px;
+    color: #5dd8d8;
+    font-weight: 300;
+}
+
+/* Media Queries */
+
+/* Estilos para telas maiores */
+@media (min-width: 1024px) {
+    #container {
+        width: 800px;
+        height: 500px;
+        margin-bottom: 40px;
+    }
+
+    .header {
+        height: 250px;
+    }
+
+    .a, .b {
+        padding: 30px;
+    }
+
+    .a {
+        width: 345px;
+    }
+
+    .b {
+        width: 345px;
+    }
+
+    .a :nth-child(1), .b :nth-child(1) {
+        font-size: 26px;
+    }
+
+    .a :nth-child(3), .b :nth-child(2), .b :nth-child(3), .b :nth-child(4), .b :nth-child(5), .b :nth-child(6), .b :nth-child(7), .b :nth-child(8) {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+    body {
+        height: 100%;
+        display: flex;
+        align-content: center;
+        width: auto;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #container { 
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        max-width: 300px;
+        max-height: 450px;
+        margin-bottom: 380px;
+        margin-top: 100px;
+        font-family: "Karla", sans-serif;
+    }
+
+    .header {
+        padding: 15px 0px 15px 0px;
+        width: 330px;
+        height: 100%;
+        text-align: left;
+
+    }
+
+    .header h1 {
+        margin: 22px;
+    }
+
+   .header :nth-child(2),
+   .header :nth-child(3),
+   .header :nth-child(4) {
+        margin-left: 15px;
+        padding: 0px 10px 0px 10px;
+   }
+
+    
+
+    .botao {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .botao:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px);
+    }
+
+    .a {
+        max-width: 300px;
+        height: 120%;
+        border-bottom-left-radius: 0px;
+    }
+
+    .b {
+        max-width: 300px;
+        height: 80%; 
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .header h1 {
+        font-size: 18px; /* Ajuste do tamanho da fonte para caber melhor */
+    }
+
+    .header :nth-child(2) {
+        font-size: 14px;
+    }
+
+    .header :nth-child(3),
+    .header :nth-child(4) {
+        font-size: 12px;
+    }
+
+    .a :nth-child(1) {
+        font-size: 20px;
+    }
+
+    .a :nth-child(3),
+    .b :nth-child(2),
+    .b :nth-child(3),
+    .b :nth-child(4),
+    .b :nth-child(5),
+    .b :nth-child(6),
+    .b :nth-child(7),
+    .b :nth-child(8) {
+        font-size: 12px;
+    }
+}
+
